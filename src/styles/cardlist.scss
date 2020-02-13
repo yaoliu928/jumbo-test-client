@@ -1,0 +1,79 @@
+@import'./constants.scss';
+
+.popular__card-list {
+    background: $BACKGROUND_COLOR;
+    .container{
+        padding-top: 50px;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        h1{
+            color:$WHITE_COLOR;
+        }
+    }
+    &__card{
+        img{
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.4) 1.3rem 0.7rem 0.7rem;
+        };
+        h4{
+            color:$WHITE_COLOR;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: 400;
+        }
+        p{
+            color:$LIGHT_COLOR;
+            margin-top:5px;
+            margin-bottom: 10px;
+        }
+        .label{
+            height: 20px;
+            line-height: 20px!important;
+            vertical-align: middle;
+            text-align: center;
+            width: 50px;
+            border-radius: 10px;
+            position: absolute;
+            top:10px;
+            left:20px;
+            &--high{
+                background-color:$HIGH_VOTE_COLOR;
+            }
+            &--medium{
+                background-color:$MEDIUM_VOTE_COLOR;
+            }
+            &--low{
+                background-color:$LOW_VOTE_COLOR;
+            }
+            p{
+                margin: 0;
+                color: $WHITE_COLOR;
+                font-weight: 900;
+            }
+        }
+    }
+    aside{
+        bottom:120px!important;
+        background-color:$GREEN_COLOR;
+        &:focus{
+            outline-color: $GREEN_COLOR;
+        }
+    }
+    .button--more{
+        position: relative;
+        float: right;
+        bottom: 30px;
+        right: 10px;
+    }
+    .loader{
+        padding-top:30px;
+        .ui.segment{
+            height: 500px;
+            border: none;
+        }
+        .ui.dimmer{
+            background-color: $BACKGROUND_COLOR;
+        }
+    }
+};

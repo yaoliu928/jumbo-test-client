@@ -1,0 +1,41 @@
+@import'./constants.scss';
+
+.popular__header {
+  background-image: url(./../components/images/Header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  color: white;
+  .container{
+    width: 60%;
+  }
+  &--search {
+    position: absolute !important;
+    bottom:0;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 20px;
+    .input{
+      height:40px;
+      font-size: larger;
+      font-weight: 900;
+      color: $GREEN_COLOR;      
+      ::placeholder {
+        color: $GREEN_COLOR;
+        font-weight: 900;
+      }
+      input{
+        color: $GREEN_COLOR;
+        font-weight: 900;
+      }
+    }
+  }
+}

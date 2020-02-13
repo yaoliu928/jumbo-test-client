@@ -1,0 +1,78 @@
+@import'./constants.scss';
+
+.movie{
+    .loading{
+        .ui.segment{
+            border: none;
+            height: 600px;
+        }
+        .ui.dimmer{
+            background-color: $BACKGROUND_COLOR;
+        }
+    }
+    &__header{
+        @media only screen and (max-width: $largestMobileScreen) {
+            height: 250px;
+          }
+        @media only screen and (min-width: $largestMobileScreen) {
+            height: 400px;
+          }
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        .back-arrow{
+          font-size: 30px;
+          color:$WHITE_COLOR;
+          position: relative;
+          left: 40px;
+          top: 30px;
+          i:hover{
+            cursor: pointer;
+          }
+        }
+    }
+    &__details{
+        background-color: $BACKGROUND_COLOR;
+        &--bolder{
+            font-weight: 900;
+        };
+        .container{
+            width: 85%;
+            padding: 50px;
+            h1{
+                color:$WHITE_COLOR;
+                margin-bottom: 6vw;
+                @media only screen and (max-width: $largestMobileScreen) {
+                    font-size: 5.5vw;
+                  }
+                @media only screen and (min-width: $largestMobileScreen) {
+                    font-size: 3vw;
+                  }
+            }
+            h2{
+                color:$WHITE_COLOR;
+                @media only screen and (max-width: $largestMobileScreen) {
+                    font-size: 4vw;
+                  }
+                @media only screen and (min-width: $largestMobileScreen) {
+                    font-size: 2.4vw;
+                  }   
+            }
+            p{
+                color:$LIGHT_COLOR;
+                @media only screen and (max-width: $largestMobileScreen) {
+                    font-size: 3vw;
+                  }
+                @media only screen and (min-width: $largestMobileScreen) {
+                    font-size: 1.5vw;
+                  }
+                margin-bottom: 0;
+            }
+            img{
+                margin-top: -60%;
+                border-radius: 20px;
+                box-shadow: rgba(0, 0, 0, 0.4) 1.3rem 0.7rem 0.7rem;
+            }
+        }
+    }
+}
