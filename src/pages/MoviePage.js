@@ -10,7 +10,7 @@ const MoviePage = (props) => {
 
   const fetchMovieData = () => {
     setIsLoading(true);
-    axios.get(`http://localhost:3050/api/movies/${id}`)
+    axios.get(`https://jumbo-server.herokuapp.com/api/movies/${id}`)
       .then((res) => {
         setMovie(res.data.data);
         setIsLoading(false);

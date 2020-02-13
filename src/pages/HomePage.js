@@ -18,7 +18,7 @@ const Popular = (props) => {
   const fetchPopularData = (page) => {
     setSearchState(false);
     page === 1 ? setIsLoading(true) : setIsLoading(false);
-    axios.get(`http://localhost:3050/api/popular?page=${page}`)
+    axios.get(`https://jumbo-server.herokuapp.com/api/popular?page=${page}`)
       .then((res) => {
         setPopularMovies([...popularMovies, res.data.data]);
         setSearchMovies([]);
@@ -31,7 +31,7 @@ const Popular = (props) => {
   const fetchSearchData = (searchValue, page) => {
     setSearchState(true);
     page === 1 ? setIsLoading(true) : setIsLoading(false);
-    axios.get(`http://localhost:3050/api/search?keyWord=${searchValue}&page=${page}`)
+    axios.get(`https://jumbo-server.herokuapp.com/api/search?keyWord=${searchValue}&page=${page}`)
       .then((res) => {
         if (!searchValue) {
           setPopularPage(1);
